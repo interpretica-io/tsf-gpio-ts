@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>GPIO chips</description>
+    <author mailto="maxim.menshikov@interpretica.io" />
+    <session track_conf="silent">
+        <prologue><script name="prologue"><objective>Prepare the GPIO group.</objective></script></prologue>
+        <epilogue><script name="epilogue"><objective>Finalize the GPIO group.</objective></script></epilogue>
+        <run><script name="list"><objective>Enumerate GPIO chips and read a line.</objective></script></run>
+    </session>
+</package>

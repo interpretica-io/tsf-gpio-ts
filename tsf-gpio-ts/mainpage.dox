@@ -1,0 +1,15 @@
+/** @mainpage
+
+This suite exercises tsf-gpio - driving the low-level buses of the Test
+Agent it runs on, over libgpiod and the i2c/spi ioctls:
+
+- @ref gpio-list - take a snapshot of the agent's GPIO chips (path,
+  label, line count) and read one line back as an input.
+
+It is read-only - it enumerates and reads, it never drives a line. What
+is attached is the host's to decide, so the suite asserts no chip count:
+an agent with no gpiochip passes cleanly. The point is that tsf-gpio
+enumerates over the library (not by scraping a program) and parses the
+chips into structured data.
+
+*/

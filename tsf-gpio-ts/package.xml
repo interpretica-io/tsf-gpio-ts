@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>tsf-gpio demonstration suite</description>
+
+    <!-- @page gpio-ts GPIO Suite
+          @objective Exercise tsf-gpio against the agent's GPIO chips.
+
+          @par Test Groups:
+          - @ref gpio-list - Enumerate GPIO chips and read a line
+
+          @par Notes:
+          - Enumeration runs on the agent, in its RPC server, over
+            libgpiod. It is read-only (no line is driven).
+          - Asserts no chip count: an agent with no gpiochip passes
+            cleanly. Needs /dev/gpiochip* and libgpiod when run natively.
+    -->
+
+    <author mailto="maxim.menshikov@interpretica.io" />
+
+    <session track_conf="silent">
+        <prologue>
+            <script name="prologue"><objective>Prepare the test environment.@md</objective></script>
+        </prologue>
+        <epilogue>
+            <script name="epilogue"><objective>Finalize the test environment.@md</objective></script>
+        </epilogue>
+        <run>
+            <package name="gpio" />
+        </run>
+    </session>
+</package>

@@ -1,0 +1,8 @@
+repositories:
+  - name: tsf_gpio
+    url: https://github.com/interpretica-io/tsf-gpio.git
+    ref: main
+    libs:
+      - ta_gpio
+      - rpcs_gpio
+      - tapi_gpio
